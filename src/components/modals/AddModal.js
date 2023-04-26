@@ -7,8 +7,7 @@ import { userCreated } from "../../Redux/userSlice";
 
 function AddModal(props) {
   const { visibleModal, setVisibleModal } = props;
-  const [photo, setPhoto] = useState("");
-  const [imageUpload, setImageUpload] = useState(null);
+ 
 
   const dispatch = useDispatch();
   return (
