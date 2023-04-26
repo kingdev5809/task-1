@@ -1,14 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
 import UsersItem from "./UsersItem";
 import EditModal from "./modals/EditModal";
 
 function Users() {
   const [idx, setIdx] = useState();
   const [visibleModal, setVisibleModal] = useState("d-none");
- 
-
 
   const getUsers = useSelector((state) => state.users.user);
   return (
@@ -24,12 +21,11 @@ function Users() {
           </tr>
           {getUsers.map((item, idx) => (
             <UsersItem
-              item={item}   
+              item={item}
               idx={idx}
               key={item.id}
               setVisibleModal={setVisibleModal}
               setIdx={setIdx}
-             
             />
           ))}
         </tbody>
@@ -38,7 +34,6 @@ function Users() {
         visibleModal={visibleModal}
         setVisibleModal={setVisibleModal}
         idx={idx}
-   
       />
     </div>
   );
