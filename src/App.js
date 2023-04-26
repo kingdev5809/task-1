@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import { useSelector } from "react-redux";
 import { AddModal, Users } from "./components";
 
 function App() {
