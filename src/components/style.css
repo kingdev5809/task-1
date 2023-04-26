@@ -1,0 +1,30 @@
+.w-screen {
+  position: fixed;
+  background-color: black;
+  opacity: 0.25;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.modalWindows {
+  z-index: 999;
+  position: fixed;
+  top: 1.625rem;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 40px;
+  width: 650px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.closeModal {
+  cursor: pointer;
+  position: absolute;
+  right: 24px;
+  top: 43px;
+  font-size: 23px;
+}

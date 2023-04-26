@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { useSelector } from "react-redux";
+import { AddModal, Users } from "./components";
 
 function App() {
+  const [visibleModal, setVisibleModal] = useState("d-none");
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <div className="table-wrapper">
+          <div className="table-container">
+            <button
+              className="button-64"
+              onClick={() => {
+                setVisibleModal("d-block");
+              }}
+            >
+              <span className="text">Add user</span>
+            </button>
+
+            <Users   />
+          </div>
+        </div>
+      </div>
+      <AddModal
+        visibleModal={visibleModal}
+        setVisibleModal={setVisibleModal}
+       
+      />
+    </>
   );
 }
 
